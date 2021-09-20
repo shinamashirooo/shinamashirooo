@@ -20,19 +20,19 @@ void game()
 	shinamashiro = rand() % 100 + 1;
 	while (1)
 	{
-		printf("Çë²ÂÊı×Ö:>");
+		printf("è¯·çŒœæ•°å­—:>");
 		scanf("%d", &guess);
 		if (guess > shinamashiro)
 		{
-			printf("²Â´óÁË\n");
+			printf("çŒœå¤§äº†\n");
 		}
 		else if(guess < shinamashiro)
 		{
-			printf("²ÂĞ¡ÁË\n");
+			printf("çŒœå°äº†\n");
 		}
 		else 
 		{
-			printf("¹§Ï²Äã£¬²ÂÖĞÁË£¡£¡£¡\n ");
+			printf("æ­å–œä½ ï¼ŒçŒœä¸­äº†ï¼ï¼ï¼\n ");
 			break;
 		}
 	}
@@ -45,7 +45,7 @@ int main()
 	do
 	{
 		menu();
-		printf("ÇëÑ¡Ôñ >:");
+		printf("è¯·é€‰æ‹© >:");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -53,10 +53,10 @@ int main()
 			game();
 			break;
 		case 0:
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("ÊäÈë´íÎó!!! (ÇëÖØĞÂÊäÈë1 »ò 0)");
+			printf("è¾“å…¥é”™è¯¯!!! (è¯·é‡æ–°è¾“å…¥1 æˆ– 0)");
 			break;
 		}
 	} while (input);
