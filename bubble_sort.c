@@ -29,9 +29,9 @@ void bubble_sort(int arr[], int sz)
 
 int main()
 {
-	//¶ÔÊı×éarr½øĞĞÅÅĞò£¬ÅÄ³ÉÉıĞò
+	//å¯¹æ•°ç»„arrè¿›è¡Œæ’åºï¼Œæ‹æˆå‡åº
 	int arr[] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
-	// Ã°ÅİÅÅĞòº¯Êı
+	// å†’æ³¡æ’åºå‡½æ•°
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	bubble_sort(arr, sz);
 	int i;
