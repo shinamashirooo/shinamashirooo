@@ -1,5 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS 
-
 #include <stdio.h>
 
 #include <stdlib.h>
@@ -21,7 +19,7 @@ void game()
 	while (1)
 	{
 		printf("请猜数字:>");
-		scanf("%d", &guess);
+		scanf_s("%d", &guess);
 		if (guess > shinamashiro)
 		{
 			printf("猜大了\n");
@@ -46,7 +44,7 @@ int main()
 	{
 		menu();
 		printf("请选择 >:");
-		scanf("%d", &input);
+		scanf_s("%d", &input);
 		switch (input)
 		{
 		case 1:
