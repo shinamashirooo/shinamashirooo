@@ -12,20 +12,20 @@ void menu()
 
 void game()
 {
-	//À×µÄĞÅÏ¢´¢´æ
-	//1.²¼ÖÃºÃµÄÀ×µÄĞÅÏ¢
+	//é›·çš„ä¿¡æ¯å‚¨å­˜
+	//1.å¸ƒç½®å¥½çš„é›·çš„ä¿¡æ¯
 	char mine[ROWS][COLS] = { 0 }; //11 * 11
-	//2.ÅÅ²é³öµÄÀ×µÄĞÅÏ¢ 
+	//2.æ’æŸ¥å‡ºçš„é›·çš„ä¿¡æ¯ 
 	char show[ROWS][COLS] = { 0 };
-	//³õÊ¼»¯
+	//åˆå§‹åŒ–
 	InitBoard(mine, ROWS, COLS, '0');
 	InitBoard(show, ROWS, COLS, '*');
-	//´òÓ¡ÆåÅÌ
+	//æ‰“å°æ£‹ç›˜
 	//DisplayBoard(mine, ROW, COL);
 	DisplayBoard(show, ROW, COL);
-	//²¼ÖÃÀ×
+	//å¸ƒç½®é›·
 	SetMine(mine, ROW, COL);
-	//É¨À×
+	//æ‰«é›·
 	FindMine(mine, show, ROW, COL);
 }
 	
@@ -36,7 +36,7 @@ void test()
 	do
 	{
 		menu();
-		printf("ÇëÑ¡Ôñ:>");
+		printf("è¯·é€‰æ‹©:>");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -44,10 +44,10 @@ void test()
 			game();
 			break;
 		case 0:
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("Ñ¡Ôñ´íÎó!!!£¨ÇëÖØĞÂÑ¡Ôñ1 »ò 0)\n");
+			printf("é€‰æ‹©é”™è¯¯!!!ï¼ˆè¯·é‡æ–°é€‰æ‹©1 æˆ– 0)\n");
 			break;
 		}
 	} while (input);
