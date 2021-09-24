@@ -2,7 +2,7 @@
 
 #include "game2.h"
 
-//²Ëµ¥
+//èœå•
 void menu()
 {
 	printf("***************************\n");
@@ -10,32 +10,32 @@ void menu()
 	printf("***************************\n"); 
 }
 
-//Õû¸öÓÎÏ·µÄËã·¨ÊµÏÖ
+//æ•´ä¸ªæ¸¸æˆçš„ç®—æ³•å®ç°
 void game()
 {
 	char ret;
-	//Êı×é-´æ·ÅÆåÅÌĞÅÏ¢
-	char board[ROW][COL] = { 0 };//È«²¿¿Õ¸ñ
-	//³õÊ¼»¯ÆåÅÌ
+	//æ•°ç»„-å­˜æ”¾æ£‹ç›˜ä¿¡æ¯
+	char board[ROW][COL] = { 0 };//å…¨éƒ¨ç©ºæ ¼
+	//åˆå§‹åŒ–æ£‹ç›˜
 	InitBoard(board, ROW, COL);
-	//´òÓ¡ÆåÅÌ
+	//æ‰“å°æ£‹ç›˜
 	DisplayBoard(board, ROW, COL);
 	while (1)
 	{
-		//Íæ¼ÒÏÂÆå
+		//ç©å®¶ä¸‹æ£‹
 		PlayerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-		// ÅĞ¶ÏÍæ¼ÒÊÇ·ñÓ®
+		// åˆ¤æ–­ç©å®¶æ˜¯å¦èµ¢
 		ret = IsWin(board, ROW, COL);
 		if (ret != 'C')
 		{
 			break;
 		}
 
-		//µçÄÔÏÂÆå
+		//ç”µè„‘ä¸‹æ£‹
 		ComputerMove(board, ROW, COL);
 		DisplayBoard(board, ROW, COL);
-		// ÅĞ¶ÏÊäÓ®
+		// åˆ¤æ–­è¾“èµ¢
 		ret = IsWin(board, ROW, COL);
 		if (ret != 'C')
 		{
@@ -44,15 +44,15 @@ void game()
 	}
 	if (ret == '*')
 	{
-		printf("Íæ¼ÒÓ®\n");
+		printf("ç©å®¶èµ¢\n");
 	}
 	else if (ret == '#')
 	{
-		printf("µçÄÔÓ®\n");
+		printf("ç”µè„‘èµ¢\n");
 	}
 	else
 	{
-		printf("Æ½¾Ö\n");
+		printf("å¹³å±€\n");
 	}
 }
 
@@ -63,7 +63,7 @@ void test()
 	do
 	{
 		menu();
-		printf("ÇëÑ¡Ôñ:>");
+		printf("è¯·é€‰æ‹©:>");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -71,10 +71,10 @@ void test()
 			game();
 			break;
 		case 0:
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("Ñ¡Ôñ´íÎó£¡£¡£¡£¨ÇëÖØĞÂÑ¡Ôñ1 »ò 0£©\n");
+			printf("é€‰æ‹©é”™è¯¯ï¼ï¼ï¼ï¼ˆè¯·é‡æ–°é€‰æ‹©1 æˆ– 0ï¼‰\n");
 			break;	
 		}
 	} while (input);
